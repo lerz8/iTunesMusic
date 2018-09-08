@@ -7,7 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { AlbumComponent } from './components/album/album.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
-
+import {trimNamePipe} from './pipes/trim.names.pipe';
 
 //importar rutas
 import {ROUTES} from './app.routes';
@@ -21,7 +21,8 @@ import {MusicService} from './services/music.services';
     HomeComponent,
     SearchComponent,
     AlbumComponent,
-    NavbarComponent
+    NavbarComponent,
+    trimNamePipe
   ],
   imports: [
     BrowserModule,
