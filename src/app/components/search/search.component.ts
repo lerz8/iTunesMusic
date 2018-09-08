@@ -8,6 +8,7 @@ import { MusicService} from '../../services/music.services';
   styleUrls: ['./search.component.sass']
 })
 export class SearchComponent implements OnInit {
+ loading:boolean =true;
   musica:any[] =[];
   constructor( private activatedRoute:ActivatedRoute,
                private musicService:MusicService) { }
@@ -25,7 +26,7 @@ export class SearchComponent implements OnInit {
             this.musica.push(album);
           }
         }
-        //this.loading = false;
+        this.loading = false;
         //console.log(this.music);
       })
 
