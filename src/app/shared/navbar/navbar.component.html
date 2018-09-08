@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="assets/itunes.png" width="30" height="30" alt="">
+        iTunes Music
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item " routerLinkActive="active">
+        <a class="nav-link" routerLink="home">Home</a>
+      </li>
+
+    </ul>
+    <div class="form-inline my-4 my-lg-0">
+      <input class="form-control mr-sm-4" type="search" placeholder="Search by Album" aria-label="Search" (keyup.enter)="searchAlbum_byName(searchByName.value)" #searchByName>
+      <button (click)="searchAlbum_byName(searchByName.value)" class="btn btn-outline-info my-2 my-sm-0" type="button">Search</button>
+    </div>
+  </div>
+</nav>

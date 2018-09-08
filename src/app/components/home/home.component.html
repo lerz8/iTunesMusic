@@ -1,0 +1,20 @@
+<div class="row text-center top_25" *ngIf="loading">
+  <div class="col">
+    <i class="fas fa-spinner rotating animated fadeIn font-info fa-5x" ></i>
+  </div>
+</div>
+<div class="container space">
+  <div class="row">
+    <div class="col-md-3"  *ngFor="let album of musica">
+      <div class="card space_bottom animated fadeIn">
+          <img class="card-img-top img-fluid" [src]="album['im:image'][2].label" alt="">
+          <div class="card-body">
+            <h5 class="card-title bottom-zero">{{album['im:name'].label}}</h5>
+            <p class="card-text">{{album['im:artist'].label}}</p>
+            <p class="card-text"><small class="text-muted">{{album['im:releaseDate'].attributes.label}}</small></p>
+            <span class="badge badge-primary">Price: {{album['im:price'].attributes.amount | currency}}</span>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
