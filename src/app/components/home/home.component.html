@@ -20,6 +20,7 @@
             <p class="card-text" [title]="album['im:artist'].label">{{album['im:artist'].label | trim_names:0:20}}</p>
             <p class="card-text"><small class="text-muted">{{album['im:releaseDate'].attributes.label}}</small></p>
             <span class="badge badge-primary">Price: {{album['im:price'].attributes.amount | currency}}</span>
+            <a [href]="album['id'].label" target="_blank" class="btn btn-outline-danger btn-block flat-button">Check in iTunes</a>
           </div>
       </div>
     </div>

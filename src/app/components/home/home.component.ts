@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
     subscribe((data:any) => {
       this.musica = data.feed.entry;
       this.loading = false;
-      //console.log(data.feed.entry);
+      console.log(data.feed.entry);
     })
   }
 
